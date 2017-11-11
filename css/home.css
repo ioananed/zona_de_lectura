@@ -1,6 +1,9 @@
 body {
   padding-top: 20px;
 }
+p {
+  text-align: justify;
+}
 
 .footer {
   padding-top: 40px;

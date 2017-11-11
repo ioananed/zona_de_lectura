@@ -14,6 +14,32 @@
 
   <!-- Custom styles for this template -->
   <link href="./css/home.css" rel="stylesheet">
+  <script>
+
+  function hideAction(){
+    var elementosStory = document.getElementsByClassName('story')
+    for(i = 0;i < elementosStory.length; i++ ){
+      elementosStory[i].style.display = 'none'
+    }
+    var elementos = document.getElementsByClassName('adventure')
+    for(i = 0;i < elementos.length; i++ ){
+      elementos[i].style.display = 'block'
+    }
+
+  }
+
+  function hideClasics(){
+    var elementosStory = document.getElementsByClassName('story')
+    for(i = 0;i < elementosStory.length; i++ ){
+      elementosStory[i].style.display = 'none'
+    }
+    var elementos = document.getElementsByClassName('clasics')
+    for(i = 0;i < elementos.length; i++ ){
+      elementos[i].style.display = 'block'
+    }
+  }
+
+  </script>
 </head>
 
 <body>
@@ -39,7 +65,7 @@
               <a class="nav-link" href="#">Sobre Nosotros</a>
             </li>
             <li class="nav-item">
-              <a class="nav-link" href="#">Contacto</a>
+              <a class="nav-link" href="#">Descargar</a>
             </li>
           </ul>
         </div>
@@ -52,10 +78,10 @@
       <div class="row row-offcanvas row-offcanvas-right">
         <div class="col-6 col-md-3 sidebar-offcanvas" id="sidebar">
           <div class="list-group">
-            <a href="#" class="list-group-item active">Clasicos</a>
+            <a href="#" class="list-group-item active" onclick="hideClasics()">Clasicos</a>
             <a href="#" class="list-group-item">Fantasía</a>
             <a href="#" class="list-group-item">Romance</a>
-            <a href="#" class="list-group-item">Aventura</a>
+            <a href="#" class="list-group-item" onclick="hideAction()">Aventura</a>
             <a href="#" class="list-group-item">Leyenda</a>
           </div>
         </div>
@@ -64,48 +90,55 @@
             <button type="button" class="btn btn-primary btn-sm" data-toggle="offcanvas">Toggle nav</button>
           </p>
           <div class="row">
-            <div class="col-6 col-lg-4">
+            <div class="col-6 col-lg-4 story adventure clasics">
               <h2>El principito</h2>
               <p>El principito (en francés: Le Petit Prince) es una novela corta y la obra más famosa del escritor y aviador francés Antoine de Saint-Exupéry (1900-1944).</p>
               <span class="badge badge-primary">Adventure</span>
-              <span class="badge badge-info">Clasicos</span>
+              <span class="badge badge-danger">Clasicos</span>
+              <span class="badge badge-pill badge-success">Fantasía</span>
               <p><a class="btn btn-secondary" href="http://bibliotecadigital.ilce.edu.mx/Colecciones/ObrasClasicas/_docs/ElPrincipito.pdf" role="button">Leer &raquo;</a></p>
             </div>
             <!--/span-->
-            <div class="col-6 col-lg-4">
+            <div class="col-6 col-lg-4 story adventure clasics">
               <h2>La Odisea</h2>
               <p>La odisea empieza en Grecia años después de la Guerra Troyana. Odiseo (o Ulises), el rey de Ítaca, no ha logrado volver a casa y muchos creen que está muerto... </p>
-              <span class="badge badge-Danger">Clasicos</span>
+              <span class="badge badge-primary">Adventure</span>
+              <span class="badge badge-danger">Clasicos</span>
               <p><a class="btn btn-secondary" href="http://bibliotecadigital.ilce.edu.mx/Colecciones/ObrasClasicas/_docs/Odisea.pdf" role="button">Leer &raquo;</a></p>
             </div>
             <!--/span-->
-            <div class="col-6 col-lg-4">
+            <div class="col-6 col-lg-4 story clasics">
               <h2>Momo</h2>
               <p>Momo es una novela escrita por Michael Ende, publicada en 1973. Trata sobre el concepto del tiempo y cómo es usado por los humanos de sociedades modernas. También trata de la estafa.</p>
-              <span class="badge badge-Danger">Clasicos</span>
+              <span class="badge badge-primary">Adventure</span>
+              <span class="badge badge-danger">Clasicos</span>
               <p><a class="btn btn-secondary" href="http://latejapride.com/IMG/pdf/momo.pdf" role="button">Leer &raquo;</a></p>
             </div>
             <!--/span-->
-            <div class="col-6 col-lg-4">
+            <div class="col-6 col-lg-4 story ">
               <h2>Viaje al Centro de la Tierra </h2>
               <p>Viaje al centro de la Tierra (Voyage au centre de la Terre) es una novela de Julio Verne, publicada el 25 de noviembre de 1864, que trata de la expedición de un profesor de mineralogía, su sobrino y un guía al interior del globo o al interior
                 de la Tierra.</p>
-              <span class="badge badge-Danger">Clasicos</span>
-              <p><a class="btn btn-secondary" href="https://getafe.es/wp-content/uploads/Verne-Julio-Viaje-Al-Centro-De-La-Tierra.pdf" role="button">Leer &raquo;</a></p>
+              <span class="badge badge-primary">Adventure</span>
+              <span class="badge badge-danger">Clasicos</span>
+              <span class="badge badge-pill badge-success">Fantasía</span>
+              <p><a class="btn btn-secondary" href="http://bibliotecadigital.ilce.edu.mx/Colecciones/ObrasClasicas/_docs/ElPrincipito.pdf" role="button">Leer &raquo;</a></p>
             </div>
             <!--/span-->
-            <div class="col-6 col-lg-4">
+            <div class="col-6 col-lg-4 story">
               <h2>Las mil y una noches</h2>
               <p>Manuscrito de Las mil y una noches. Las mil y una noches (en árabe, ألف ليلة وليلة Alf layla wa-layla1​) es una célebre recopilación medieval en lengua árabe de cuentos tradicionales del Oriente Medio, que utiliza en estos forma del relato
                 enmarcado.
               </p>
+              <span class="badge badge-danger">Clasicos</span>
               <p><a class="btn btn-secondary" href="http://biblio3.url.edu.gt/Libros/2011/las_milyns.pdf" role="button">Leer &raquo;</a></p>
             </div>
             <!--/span-->
-            <div class="col-6 col-lg-4">
+            <div class="col-6 col-lg-4 story">
               <h2>Las aventuras de Tom Sawyer</h2>
               <p>Las aventuras de Tom Sawyer es una novela del autor estadounidense Mark Twain publicada en 1876,1​2​ actualmente considerada una obra maestra de la literatura. Relata las aventuras de la infancia de Tom Sawyer</p>
-              <span class="badge badge-Danger">Clasicos</span>
+              <span class="badge badge-primary">Adventure</span>
+              <span class="badge badge-danger">Clasicos</span>
               <p><a class="btn btn-secondary" href="http://www.bibliotecavasconcelos.gob.mx/recursos/sala_prensa/pdf/201010/AventurasTomSawyer.pdf" role="button">Leer &raquo;</a></p>
             </div>
             <!--/span-->
