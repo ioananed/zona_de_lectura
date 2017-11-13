@@ -14,121 +14,7 @@
 
   <!-- Custom styles for this template -->
   <link href="./css/home.css" rel="stylesheet">
-  <script>
-    function hideAction() {
-      var elementosStory = document.getElementsByClassName('story')
-      for (i = 0; i < elementosStory.length; i++) {
-        elementosStory[i].style.display = 'none'
-      }
-      var elementos = document.getElementsByClassName('adventure')
-      for (i = 0; i < elementos.length; i++) {
-        elementos[i].style.display = 'block'
-      }
-      //active
-      document.getElementById('nav-adventure').classList.add('active')
-      //deactivate
-      document.getElementById('nav-all').classList.remove('active')
-      document.getElementById('nav-romance').classList.remove('active')
-      document.getElementById('nav-fantasy').classList.remove('active')
-      document.getElementById('nav-legend').classList.remove('active')
-      document.getElementById('nav-clasics').classList.remove('active')
-
-    }
-
-    function showTodos() {
-      var elementos = document.getElementsByClassName('story')
-      for (i = 0; i < elementos.length; i++) {
-        elementos[i].style.display = 'block'
-      }
-      //active
-      document.getElementById('nav-all').classList.add('active')
-      //deactivate
-      document.getElementById('nav-romance').classList.remove('active')
-      document.getElementById('nav-adventure').classList.remove('active')
-      document.getElementById('nav-fantasy').classList.remove('active')
-      document.getElementById('nav-legend').classList.remove('active')
-      document.getElementById('nav-clasics').classList.remove('active')
-    }
-
-    function hideFantasia() {
-      var elementosStory = document.getElementsByClassName('story')
-      for (i = 0; i < elementosStory.length; i++) {
-        elementosStory[i].style.display = 'none'
-      }
-      var elementos = document.getElementsByClassName('Fantasia')
-      for (i = 0; i < elementos.length; i++) {
-        elementos[i].style.display = 'block'
-      }
-      //active
-      document.getElementById('nav-fantasy').classList.add('active')
-      //deactivate
-      document.getElementById('nav-all').classList.remove('active')
-      document.getElementById('nav-adventure').classList.remove('active')
-      document.getElementById('nav-romance').classList.remove('active')
-      document.getElementById('nav-legend').classList.remove('active')
-      document.getElementById('nav-clasics').classList.remove('active')
-
-    }
-
-    function hideRomance() {
-      var elementosStory = document.getElementsByClassName('story')
-      for (i = 0; i < elementosStory.length; i++) {
-        elementosStory[i].style.display = 'none'
-      }
-      var elementos = document.getElementsByClassName('Romance')
-      for (i = 0; i < elementos.length; i++) {
-        elementos[i].style.display = 'block'
-      }
-      //active
-      document.getElementById('nav-romance').classList.add('active')
-      //deactivate
-      document.getElementById('nav-all').classList.remove('active')
-      document.getElementById('nav-adventure').classList.remove('active')
-      document.getElementById('nav-fantasy').classList.remove('active')
-      document.getElementById('nav-legend').classList.remove('active')
-      document.getElementById('nav-clasics').classList.remove('active')
-
-    }
-
-    function hideLeyendas() {
-      var elementosStory = document.getElementsByClassName('story')
-      for (i = 0; i < elementosStory.length; i++) {
-        elementosStory[i].style.display = 'none'
-      }
-      var elementos = document.getElementsByClassName('Leyenda')
-      for (i = 0; i < elementos.length; i++) {
-        elementos[i].style.display = 'block'
-      }
-      //active
-      document.getElementById('nav-legend').classList.add('active')
-      //deactivate
-      document.getElementById('nav-all').classList.remove('active')
-      document.getElementById('nav-aventure').classList.remove('active')
-      document.getElementById('nav-fantasy').classList.remove('active')
-      document.getElementById('nav-romance').classList.remove('active')
-      document.getElementById('nav-clasics').classList.remove('active')
-
-    }
-
-    function hideClasics() {
-      var elementosStory = document.getElementsByClassName('story')
-      for (i = 0; i < elementosStory.length; i++) {
-        elementosStory[i].style.display = 'none'
-      }
-      var elementos = document.getElementsByClassName('Clasics')
-      for (i = 0; i < elementos.length; i++) {
-        elementos[i].style.display = 'block'
-      }
-      //active
-      document.getElementById('nav-clasics').classList.add('active')
-      //deactivate
-      document.getElementById('nav-all').classList.remove('active')
-      document.getElementById('nav-adventure').classList.remove('active')
-      document.getElementById('nav-fantasy').classList.remove('active')
-      document.getElementById('nav-legend').classList.remove('active')
-      document.getElementById('nav-romance').classList.remove('active')
-    }
-  </script>
+  <script src="./js/libros.js"></script>
 </head>
 
 <body>
@@ -144,17 +30,17 @@
           </button>
         <div class="collapse navbar-collapse" id="navbarCollapse">
           <ul class="navbar-nav text-md-center nav-justified w-100">
-            <li class="nav-item active">
-              <a class="nav-link" href="./home2.html">Home <span class="sr-only">(current)</span></a>
-            </li>
             <li class="nav-item">
+              <a class="nav-link" href="./home.html">Home <span class="sr-only">(current)</span></a>
+            </li>
+            <li class="nav-item active">
               <a class="nav-link" href="./libros.html">Libros</a>
             </li>
             <li class="nav-item">
-              <a class="nav-link" href="./Sobre_nosotros.html">Sobre Nosotros</a>
+              <a class="nav-link" href="./sobre_nosotros.html">Sobre Nosotros</a>
             </li>
             <li class="nav-item">
-              <a class="nav-link" href="./Descargas.html">Descargar</a>
+              <a class="nav-link" href="./descargar.html">Más webs</a>
             </li>
           </ul>
         </div>
@@ -167,9 +53,9 @@
       <div class="row row-offcanvas row-offcanvas-right">
         <div class="col-6 col-md-3 sidebar-offcanvas" id="sidebar">
           <div class="list-group">
-            <a href="#" id="nav-all" class="list-group-item" onclick="showTodos()">Todos</a>
+            <a href="#" id="nav-all" class="list-group-item active" onclick="showTodos()">Todos</a>
             <a href="#" id="nav-clasics" class="list-group-item" onclick="hideClasics()">Clasicos</a>
-            <a href="#" id="nav-fantasy" class="list-group-item" onclick="hideFantasia">Fantasía</a>
+            <a href="#" id="nav-fantasy" class="list-group-item" onclick="hideFantasia()">Fantasía</a>
             <a href="#" id="nav-romance" class="list-group-item" onclick="hideRomance()">Romance</a>
             <a href="#" id="nav-adventure" class="list-group-item" onclick="hideAction()">Aventura</a>
             <a href="#" id="nav-legend" class="list-group-item" onclick="hideLeyendas()">Leyenda</a>
